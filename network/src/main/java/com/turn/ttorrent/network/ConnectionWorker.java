@@ -120,7 +120,7 @@ public class ConnectionWorker implements Runnable {
       if (stop || Thread.currentThread().isInterrupted()) {
         return;
       }
-      logger.trace("try register channel for write. Write task is {}", writeTask);
+     /* logger.trace("try register channel for write. Write task is {}", writeTask);*/
       SocketChannel socketChannel = (SocketChannel) writeTask.getSocketChannel();
       if (!socketChannel.isOpen()) {
         iterator.remove();
