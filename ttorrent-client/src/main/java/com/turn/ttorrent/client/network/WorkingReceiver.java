@@ -110,7 +110,7 @@ public class WorkingReceiver implements DataProcessor {
       return new ShutdownAndRemovePeerProcessor(myPeerUID, myContext).processAndGetNext(socketChannel);
     }
 
-    logger.trace("try parse message from {}. Torrent {}", peer, torrent);
+   /* logger.trace("try parse message from {}. Torrent {}", peer, torrent);*/
     ByteBuffer bufferCopy = ByteBuffer.wrap(Arrays.copyOf(messageBytes.array(), messageBytes.limit()));
 
     this.messageBytes = ByteBuffer.allocate(DEF_BUFFER_SIZE);
