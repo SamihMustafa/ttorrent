@@ -543,13 +543,13 @@ public class SharingPeer extends Peer implements MessageListener, PeerInformatio
       case REQUEST:
         PeerMessage.RequestMessage request =
                 (PeerMessage.RequestMessage) msg;
-        logger.trace("Got request message for {} ({} {}@{}) from {}", new Object[]{
+       /*logger.trace("Got request message for {} ({} {}@{}) from {}", new Object[]{
                 Arrays.toString(TorrentUtils.getTorrentFileNames(torrent).toArray()),
                 request.getPiece(),
                 request.getLength(),
                 request.getOffset(),
                 this
-        });
+        });*/
         Piece rp = this.torrent.getPiece(request.getPiece());
 
         // If we are choking from this peer and it still sends us
