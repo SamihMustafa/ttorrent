@@ -145,7 +145,7 @@ public class SharedTorrent implements PeerActivityListener, TorrentMetadata, Tor
 
   private synchronized void closeFileChannelIfNecessary() throws IOException {
     if (isFileChannelOpen && myDownloaders.size() == 0) {
-      logger.debug("Closing file  channel for {} if necessary. Downloaders: {}", getHexInfoHash(), myDownloaders.size());
+     /* logger.debug("Closing file  channel for {} if necessary. Downloaders: {}", getHexInfoHash(), myDownloaders.size());*/
       this.pieceStorage.close();
       isFileChannelOpen = false;
     }

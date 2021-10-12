@@ -104,12 +104,12 @@ public class FileStorage implements TorrentByteStorage {
       myIsOpen = true;
       this.channel = raf.getChannel();
 
-      logger.debug("Opened byte storage file at {} ({}+{} byte(s)).",
+      /*logger.debug("Opened byte storage file at {} ({}+{} byte(s)).",
               new Object[]{
                       this.current.getAbsolutePath(),
                       this.offset,
                       this.size,
-              });
+              });*/
     } finally {
       myLock.writeLock().unlock();
     }
@@ -166,7 +166,7 @@ public class FileStorage implements TorrentByteStorage {
     try {
       myLock.writeLock().lock();
       if (!myIsOpen) return;
-      logger.debug("Closing file channel to {}. Channel open: {}", current.getName(), channel.isOpen());
+     /* logger.debug("Closing file channel to {}. Channel open: {}", current.getName(), channel.isOpen());*/
       if (this.channel.isOpen()) {
         try {
           this.channel.force(true);
@@ -187,8 +187,8 @@ public class FileStorage implements TorrentByteStorage {
   public void finish() throws IOException {
     try {
       myLock.writeLock().lock();
-      logger.debug("Closing file channel to " + this.current.getName() +
-              " (download complete).");
+      /*logger.debug("Closing file channel to " + this.current.getName() +
+              " (download complete).");*/
       if (this.channel.isOpen()) {
         this.channel.force(true);
       }
