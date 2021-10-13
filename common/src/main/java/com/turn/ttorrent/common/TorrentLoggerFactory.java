@@ -10,12 +10,12 @@ public final class TorrentLoggerFactory {
   @Nullable
   private static volatile String staticLoggersName = null;
 
-  public static Logger getLogger(Class<?> clazz) {
+  public static DummyLogger getLogger(Class<?> clazz) {
     String name = staticLoggersName;
     if (name == null) {
       name = clazz.getName();
     }
-    return LoggerFactory.getLogger(name);
+    return (DummyLogger) LoggerFactory.getLogger(name);
   }
 
   public static void setStaticLoggersName(@Nullable String staticLoggersName) {

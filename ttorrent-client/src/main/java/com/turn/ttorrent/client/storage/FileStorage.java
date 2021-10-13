@@ -90,8 +90,8 @@ public class FileStorage implements TorrentByteStorage {
           this.current = this.partial;
           this.isBlank = true;
         } else {
-          logger.debug("Using existing file {}.",
-                  this.target.getAbsolutePath());
+         /* logger.debug("Using existing file {}.",
+                  this.target.getAbsolutePath());*/
           this.current = this.target;
           this.isBlank = false;
         }
