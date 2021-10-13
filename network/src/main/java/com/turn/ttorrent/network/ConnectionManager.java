@@ -1,5 +1,6 @@
 package com.turn.ttorrent.network;
 
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.LoggerUtils;
 import com.turn.ttorrent.common.TimeService;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
@@ -22,7 +23,7 @@ import static com.turn.ttorrent.Constants.DEFAULT_SELECTOR_SELECT_TIMEOUT_MILLIS
 
 public class ConnectionManager {
 
-  private static final Logger logger = TorrentLoggerFactory.getLogger(ConnectionManager.class);
+  private static final DummyLogger logger =TorrentLoggerFactory.getLogger(ConnectionManager.class);
 
   private final Selector selector;
   private final TimeService myTimeService;

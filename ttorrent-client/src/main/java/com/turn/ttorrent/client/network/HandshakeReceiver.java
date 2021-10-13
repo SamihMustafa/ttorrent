@@ -5,6 +5,7 @@ import com.turn.ttorrent.client.Handshake;
 import com.turn.ttorrent.client.LoadedTorrent;
 import com.turn.ttorrent.client.SharedTorrent;
 import com.turn.ttorrent.client.peer.SharingPeer;
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.LoggerUtils;
 import com.turn.ttorrent.common.PeerUID;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
@@ -19,7 +20,7 @@ import java.util.concurrent.RejectedExecutionException;
 
 public class HandshakeReceiver implements DataProcessor {
 
-  private static final Logger logger = TorrentLoggerFactory.getLogger(HandshakeReceiver.class);
+  private static final DummyLogger logger =TorrentLoggerFactory.getLogger(HandshakeReceiver.class);
 
   private final Context myContext;
   private final String myHostAddress;

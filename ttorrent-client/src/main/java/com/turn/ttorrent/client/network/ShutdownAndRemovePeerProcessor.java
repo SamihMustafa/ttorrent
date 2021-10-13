@@ -3,6 +3,7 @@ package com.turn.ttorrent.client.network;
 import com.turn.ttorrent.client.Context;
 import com.turn.ttorrent.client.PeersStorage;
 import com.turn.ttorrent.client.peer.SharingPeer;
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.PeerUID;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
 import org.slf4j.Logger;
@@ -12,7 +13,7 @@ import java.nio.channels.ByteChannel;
 
 public class ShutdownAndRemovePeerProcessor implements DataProcessor {
 
-  private static final Logger logger = TorrentLoggerFactory.getLogger(ShutdownAndRemovePeerProcessor.class);
+  private static final DummyLogger logger =TorrentLoggerFactory.getLogger(ShutdownAndRemovePeerProcessor.class);
 
   private final PeerUID myPeerUID;
   private final Context myContext;

@@ -1,5 +1,6 @@
 package com.turn.ttorrent.network.keyProcessors;
 
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.LoggerUtils;
 import com.turn.ttorrent.common.TimeService;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
@@ -12,7 +13,7 @@ import java.nio.channels.SocketChannel;
 
 public class CleanupKeyProcessor implements CleanupProcessor {
 
-  private final static Logger logger = TorrentLoggerFactory.getLogger(CleanupKeyProcessor.class);
+  private final static DummyLogger logger =TorrentLoggerFactory.getLogger(CleanupKeyProcessor.class);
 
   private final TimeService myTimeService;
 

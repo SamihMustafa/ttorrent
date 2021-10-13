@@ -3,6 +3,7 @@ package com.turn.ttorrent.tracker;
 import com.turn.ttorrent.bcodec.BDecoder;
 import com.turn.ttorrent.bcodec.BEValue;
 import com.turn.ttorrent.bcodec.BEncoder;
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
 import com.turn.ttorrent.common.protocol.TrackerMessage;
 import com.turn.ttorrent.common.protocol.http.HTTPTrackerErrorMessage;
@@ -20,7 +21,7 @@ public class MultiAnnounceRequestProcessor {
 
   private final TrackerRequestProcessor myTrackerRequestProcessor;
 
-  private static final Logger logger =
+  private static final DummyLogger logger =
           TorrentLoggerFactory.getLogger(MultiAnnounceRequestProcessor.class);
 
   public MultiAnnounceRequestProcessor(TrackerRequestProcessor trackerRequestProcessor) {

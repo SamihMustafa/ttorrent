@@ -1,5 +1,6 @@
 package com.turn.ttorrent.tracker;
 
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.LoggerUtils;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
 import org.apache.commons.io.IOUtils;
@@ -22,7 +23,7 @@ import java.nio.channels.WritableByteChannel;
  */
 public class TrackerServiceContainer implements Container {
 
-  private static final Logger logger =
+  private static final DummyLogger logger =
           TorrentLoggerFactory.getLogger(TrackerServiceContainer.class);
 
   private TrackerRequestProcessor myRequestProcessor;

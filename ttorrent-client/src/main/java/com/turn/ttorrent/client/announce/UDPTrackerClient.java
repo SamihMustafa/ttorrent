@@ -16,6 +16,7 @@
 package com.turn.ttorrent.client.announce;
 
 import com.turn.ttorrent.common.AnnounceableInformation;
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.Peer;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
 import com.turn.ttorrent.common.protocol.AnnounceRequestMessage;
@@ -61,7 +62,7 @@ import java.util.Random;
  */
 public class UDPTrackerClient extends TrackerClient {
 
-  protected static final Logger logger =
+  protected static final DummyLogger logger =
           TorrentLoggerFactory.getLogger(UDPTrackerClient.class);
 
   /**

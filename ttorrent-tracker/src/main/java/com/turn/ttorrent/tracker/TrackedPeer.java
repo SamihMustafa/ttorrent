@@ -45,7 +45,7 @@ import java.util.Map;
  */
 public class TrackedPeer extends Peer {
 
-  private static final Logger logger =
+  private static final DummyLogger logger =
           TorrentLoggerFactory.getLogger(TrackedPeer.class);
 
   private final TimeService myTimeService;

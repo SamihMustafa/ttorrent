@@ -1,5 +1,6 @@
 package com.turn.ttorrent.network;
 
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
@@ -11,7 +12,7 @@ import java.nio.channels.ServerSocketChannel;
 
 public class FirstAvailableChannel implements ServerChannelRegister {
 
-  private static final Logger logger = TorrentLoggerFactory.getLogger(FirstAvailableChannel.class);
+  private static final DummyLogger logger =TorrentLoggerFactory.getLogger(FirstAvailableChannel.class);
 
   private final int firstTryPort;
   private final int lastTryPort;

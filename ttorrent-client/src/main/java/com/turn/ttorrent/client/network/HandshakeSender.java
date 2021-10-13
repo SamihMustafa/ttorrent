@@ -2,6 +2,7 @@ package com.turn.ttorrent.client.network;
 
 import com.turn.ttorrent.client.Context;
 import com.turn.ttorrent.client.Handshake;
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.Peer;
 import com.turn.ttorrent.common.TorrentHash;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
@@ -14,7 +15,7 @@ import java.util.Arrays;
 
 public class HandshakeSender implements DataProcessor {
 
-  private static final Logger logger = TorrentLoggerFactory.getLogger(HandshakeSender.class);
+  private static final DummyLogger logger =TorrentLoggerFactory.getLogger(HandshakeSender.class);
 
   private final TorrentHash myTorrentHash;
   private final String myRemotePeerIp;

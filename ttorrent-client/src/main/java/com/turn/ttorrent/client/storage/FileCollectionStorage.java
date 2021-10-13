@@ -15,6 +15,7 @@
  */
 package com.turn.ttorrent.client.storage;
 
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.TorrentFile;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
 import com.turn.ttorrent.common.TorrentMetadata;
@@ -43,7 +44,7 @@ import java.util.List;
  */
 public class FileCollectionStorage implements TorrentByteStorage {
 
-  private static final Logger logger =
+  private static final DummyLogger logger =
           TorrentLoggerFactory.getLogger(FileCollectionStorage.class);
 
   private final List<FileStorage> files;

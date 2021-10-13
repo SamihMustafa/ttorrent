@@ -17,6 +17,7 @@ package com.turn.ttorrent.client;
 
 import com.turn.ttorrent.client.peer.SharingPeer;
 import com.turn.ttorrent.client.storage.PieceStorage;
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
 import com.turn.ttorrent.common.TorrentUtils;
 import org.slf4j.Logger;
@@ -46,7 +47,7 @@ import java.util.Arrays;
  */
 public class Piece implements Comparable<Piece>, PieceInformation {
 
-  private static final Logger logger =
+  private static final DummyLogger logger =
           TorrentLoggerFactory.getLogger(Piece.class);
 
   private final PieceStorage pieceStorage;

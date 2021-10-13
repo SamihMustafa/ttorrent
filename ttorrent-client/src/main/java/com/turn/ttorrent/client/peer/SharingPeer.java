@@ -18,10 +18,7 @@ package com.turn.ttorrent.client.peer;
 import com.turn.ttorrent.client.PeerInformation;
 import com.turn.ttorrent.client.Piece;
 import com.turn.ttorrent.client.SharedTorrent;
-import com.turn.ttorrent.common.LoggerUtils;
-import com.turn.ttorrent.common.Peer;
-import com.turn.ttorrent.common.TorrentLoggerFactory;
-import com.turn.ttorrent.common.TorrentUtils;
+import com.turn.ttorrent.common.*;
 import com.turn.ttorrent.common.protocol.PeerMessage;
 import com.turn.ttorrent.network.ConnectionClosedException;
 import com.turn.ttorrent.network.ConnectionManager;
@@ -73,7 +70,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class SharingPeer extends Peer implements MessageListener, PeerInformation {
 
-  private static final Logger logger = TorrentLoggerFactory.getLogger(SharingPeer.class);
+  private static final DummyLogger logger =TorrentLoggerFactory.getLogger(SharingPeer.class);
 
   private final Object availablePiecesLock;
   private volatile boolean choking;

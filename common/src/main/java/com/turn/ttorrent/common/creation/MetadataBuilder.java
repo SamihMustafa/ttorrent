@@ -19,6 +19,7 @@ package com.turn.ttorrent.common.creation;
 import com.turn.ttorrent.Constants;
 import com.turn.ttorrent.bcodec.BEValue;
 import com.turn.ttorrent.bcodec.BEncoder;
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
 import com.turn.ttorrent.common.TorrentMetadata;
 import com.turn.ttorrent.common.TorrentParser;
@@ -34,7 +35,7 @@ import static com.turn.ttorrent.common.TorrentMetadataKeys.*;
 @SuppressWarnings({"unused", "WeakerAccess"})
 public class MetadataBuilder {
 
-  private final static Logger logger = TorrentLoggerFactory.getLogger(MetadataBuilder.class);
+  private final static DummyLogger logger =TorrentLoggerFactory.getLogger(MetadataBuilder.class);
   private final static String DEFAULT_CREATED_BY = "ttorrent library";
 
   //root dictionary

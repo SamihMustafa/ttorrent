@@ -1,5 +1,6 @@
 package com.turn.ttorrent.network.keyProcessors;
 
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
 import com.turn.ttorrent.network.TimeoutAttachment;
 import org.slf4j.Logger;
@@ -12,7 +13,7 @@ import java.nio.channels.SocketChannel;
 
 public class KeyProcessorUtil {
 
-  private final static Logger logger = TorrentLoggerFactory.getLogger(KeyProcessorUtil.class);
+  private final static DummyLogger logger =TorrentLoggerFactory.getLogger(KeyProcessorUtil.class);
 
   public static TimeoutAttachment getAttachmentAsTimeoutOrNull(SelectionKey key) {
     Object attachment = key.attachment();

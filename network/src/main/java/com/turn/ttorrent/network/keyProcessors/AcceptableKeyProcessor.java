@@ -1,5 +1,6 @@
 package com.turn.ttorrent.network.keyProcessors;
 
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.TimeService;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
 import com.turn.ttorrent.network.*;
@@ -11,7 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class AcceptableKeyProcessor implements KeyProcessor {
 
-  private static final Logger logger = TorrentLoggerFactory.getLogger(AcceptableKeyProcessor.class);
+  private static final DummyLogger logger =TorrentLoggerFactory.getLogger(AcceptableKeyProcessor.class);
 
   private final Selector mySelector;
   private final String myServerSocketLocalAddress;

@@ -1,5 +1,6 @@
 package com.turn.ttorrent.client.network;
 
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
 import org.slf4j.Logger;
 
@@ -8,7 +9,7 @@ import java.nio.channels.ByteChannel;
 
 public class ShutdownProcessor implements DataProcessor {
 
-  private static final Logger logger = TorrentLoggerFactory.getLogger(ShutdownProcessor.class);
+  private static final DummyLogger logger =TorrentLoggerFactory.getLogger(ShutdownProcessor.class);
 
   @Override
   public DataProcessor processAndGetNext(ByteChannel socketChannel) throws IOException {

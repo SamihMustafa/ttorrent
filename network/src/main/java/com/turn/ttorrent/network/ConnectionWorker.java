@@ -1,5 +1,6 @@
 package com.turn.ttorrent.network;
 
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.LoggerUtils;
 import com.turn.ttorrent.common.TimeService;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
@@ -20,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ConnectionWorker implements Runnable {
 
-  private static final Logger logger = TorrentLoggerFactory.getLogger(ConnectionWorker.class);
+  private static final DummyLogger logger =TorrentLoggerFactory.getLogger(ConnectionWorker.class);
   private static final String SELECTOR_THREAD_NAME = "Torrent channels manager thread";
   private volatile boolean stop = false;
   private final Selector selector;

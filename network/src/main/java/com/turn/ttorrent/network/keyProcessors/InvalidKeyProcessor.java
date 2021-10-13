@@ -1,5 +1,6 @@
 package com.turn.ttorrent.network.keyProcessors;
 
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
 import com.turn.ttorrent.network.ReadAttachment;
 import org.slf4j.Logger;
@@ -12,7 +13,7 @@ import java.nio.channels.SocketChannel;
 
 public class InvalidKeyProcessor implements KeyProcessor {
 
-  private final static Logger logger = TorrentLoggerFactory.getLogger(InvalidKeyProcessor.class);
+  private final static DummyLogger logger =TorrentLoggerFactory.getLogger(InvalidKeyProcessor.class);
 
   @Override
   public void process(SelectionKey key) throws IOException {

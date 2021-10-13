@@ -47,7 +47,7 @@ import java.util.concurrent.ConcurrentMap;
  */
 public class TrackedTorrent implements TorrentHash {
 
-  private static final Logger logger =
+  private static final DummyLogger logger =
           TorrentLoggerFactory.getLogger(TrackedTorrent.class);
 
   /**

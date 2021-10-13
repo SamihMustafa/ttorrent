@@ -1,5 +1,6 @@
 package com.turn.ttorrent.network.keyProcessors;
 
+import com.turn.ttorrent.common.DummyLogger;
 import com.turn.ttorrent.common.TorrentLoggerFactory;
 import com.turn.ttorrent.network.ConnectionClosedException;
 import com.turn.ttorrent.network.WriteAttachment;
@@ -14,7 +15,7 @@ import java.nio.channels.SocketChannel;
 
 public class WritableKeyProcessor implements KeyProcessor {
 
-  private static final Logger logger = TorrentLoggerFactory.getLogger(WritableKeyProcessor.class);
+  private static final DummyLogger logger =TorrentLoggerFactory.getLogger(WritableKeyProcessor.class);
 
   @Override
   public void process(SelectionKey key) throws IOException {
