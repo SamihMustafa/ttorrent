@@ -8,6 +8,6 @@ public class Utils {
 
   public static Level getLogLevel() {
     final String levelStr = System.getProperty(LOG_PROPERTY_KEY);
-    return Level.toLevel(levelStr, Level.INFO);
+    return Level.toLevel(levelStr, Level.ERROR);
   }
 }

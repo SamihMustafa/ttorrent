@@ -4,6 +4,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.Marker;
+import org.slf4j.MarkerFactory;
 
 public final class TorrentLoggerFactory {
 
@@ -11,11 +13,7 @@ public final class TorrentLoggerFactory {
   private static volatile String staticLoggersName = null;
 
   public static DummyLogger getLogger(Class<?> clazz) {
-    String name = staticLoggersName;
-    if (name == null) {
-      name = clazz.getName();
-    }
-    return (DummyLogger) LoggerFactory.getLogger(name);
+    return new DummyLogger();
   }
 
   public static void setStaticLoggersName(@Nullable String staticLoggersName) {
